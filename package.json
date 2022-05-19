@@ -1,0 +1,11 @@
+{
+  "name": "meetmax",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Gabriel Castilho",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GabrielCastilhoV/meetmax.git"
+  }
+}
