@@ -1,3 +1,4 @@
+import { AppLayout } from 'components/layouts'
 import { ThemeProvider } from 'next-themes'
 
 import { darkTheme } from 'styles/stitches.config'
@@ -14,7 +15,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
       value={{ light: 'light-theme', dark: darkTheme.className }}
       defaultTheme="system"
     >
-      {children}
+      <AppLayout>{children}</AppLayout>
     </ThemeProvider>
   )
 }
