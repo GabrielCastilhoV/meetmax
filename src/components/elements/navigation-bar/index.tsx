@@ -11,15 +11,17 @@ export const NavigationBar = () => {
 
   return (
     <S.Wrapper>
-      <S.Logo>
-        <Image
-          src="/icons/logo.svg"
-          alt="Blue Meetmax logo with a phone in the middle"
-          width="30px"
-          height="30px"
-        />
-        <span>Meetmax</span>
-      </S.Logo>
+      <Link href="/" passHref>
+        <S.Logo>
+          <Image
+            src="/icons/logo.svg"
+            alt="Blue Meetmax logo with a phone in the middle"
+            width="30px"
+            height="30px"
+          />
+          <span>Meetmax</span>
+        </S.Logo>
+      </Link>
 
       <S.Menu>
         {navigationRoutes.map((item) => (

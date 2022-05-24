@@ -27,7 +27,7 @@ export const utils: ConfigType.Utils = {
     paddingLeft: value
   }),
   pr: (value: PropertyValue<'padding'>) => ({
-    paddingLeft: value
+    paddingRight: value
   }),
   pt: (value: PropertyValue<'padding'>) => ({
     paddingTop: value

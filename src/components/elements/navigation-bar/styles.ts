@@ -20,6 +20,8 @@ export const Logo = styled('div', {
   justify: 'center',
   gap: '$4',
 
+  cursor: 'pointer',
+
   span: {
     fontSize: '$md',
     fontWeight: '$bold'
@@ -48,6 +50,7 @@ export const MenuItem = styled('a', {
   variants: {
     active: {
       true: {
+        color: '#F9FAFB',
         bg: '$gray300'
       }
     }

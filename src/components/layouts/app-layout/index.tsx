@@ -1,4 +1,4 @@
-import { NavigationBar } from 'components/elements'
+import { Header, NavigationBar } from 'components/elements'
 
 import * as S from './styles'
 
@@ -11,7 +11,10 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
     <S.Wrapper>
       <NavigationBar />
 
-      {children}
+      <S.Content>
+        <Header />
+        {children}
+      </S.Content>
     </S.Wrapper>
   )
 }

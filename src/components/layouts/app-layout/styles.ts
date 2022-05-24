@@ -8,3 +8,5 @@ export const Wrapper = styled('div', {
     gridTemplateColumns: '250px 1fr'
   }
 })
+
+export const Content = styled('div', {})
