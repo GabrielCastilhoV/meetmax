@@ -1,6 +1,7 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+
+import { Logo } from 'components/elements'
 
 import { navigationRoutes } from 'utils/constants'
 
@@ -11,17 +12,7 @@ export const NavigationBar = () => {
 
   return (
     <S.Wrapper>
-      <Link href="/" passHref>
-        <S.Logo>
-          <Image
-            src="/icons/logo.svg"
-            alt="Blue Meetmax logo with a phone in the middle"
-            width="30px"
-            height="30px"
-          />
-          <span>Meetmax</span>
-        </S.Logo>
-      </Link>
+      <Logo />
 
       <S.Menu>
         {navigationRoutes.map((item) => (

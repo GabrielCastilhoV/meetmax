@@ -14,20 +14,6 @@ export const Wrapper = styled('nav', {
   }
 })
 
-export const Logo = styled('div', {
-  display: 'flex',
-  align: 'center',
-  justify: 'center',
-  gap: '$4',
-
-  cursor: 'pointer',
-
-  span: {
-    fontSize: '$md',
-    fontWeight: '$bold'
-  }
-})
-
 export const Menu = styled('menu', {
   display: 'grid',
   gridGap: '$5',

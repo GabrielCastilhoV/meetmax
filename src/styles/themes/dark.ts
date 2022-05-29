@@ -6,6 +6,7 @@ export const dark: ConfigType.Theme = {
 
     gray50: '#191C21',
     gray100: '#212833',
+    gray150: '#959EAE',
     gray200: '#191C21',
     gray300: '#4E5D78',
 
