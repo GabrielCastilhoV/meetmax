@@ -8,6 +8,11 @@ export const Wrapper = styled('button', {
 
   br: '$xs',
 
+  display: 'flex',
+  align: 'center',
+  justify: 'center',
+  gap: '$2',
+
   cursor: 'pointer',
   color: '$text',
 
@@ -23,28 +28,64 @@ export const Wrapper = styled('button', {
 
   variants: {
     layout: {
-      normal: {},
+      normal: {
+        '@lg': {
+          px: '$10'
+        },
+
+        transition: 'filter 0.2s ease-in-out',
+
+        '&:hover': {
+          filter: 'brightness(0.9)'
+        }
+      },
+
       minimal: {
-        bg: 'none',
+        bg: 'transparent',
         border: 'none'
       }
     },
 
     size: {
-      large: {},
+      large: {
+        w: '100%'
+      },
+
       medium: {},
       small: {}
     },
 
     color: {
-      primary: {},
-      secondary: {}
+      primary: {
+        bg: '$blue300'
+      },
+      secondary: {
+        bg: 'transpararent'
+      }
     }
   },
+
+  compoundVariants: [
+    {
+      layout: 'minimal',
+      size: 'small',
+      css: {
+        span: {
+          display: 'none'
+        },
+
+        '@lg': {
+          span: {
+            display: 'block'
+          }
+        }
+      }
+    }
+  ],
 
   defaultVariants: {
     size: 'large',
     layout: 'normal',
-    color: 'primary'
+    color: 'secondary'
   }
 })

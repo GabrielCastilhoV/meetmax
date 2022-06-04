@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 
+import { FeedView } from 'views'
+
 const Home: NextPage = () => {
-  return <h1>Home</h1>
+  return <FeedView />
 }
 
 export default Home
