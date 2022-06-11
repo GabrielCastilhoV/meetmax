@@ -10,7 +10,9 @@ export const Wrapper = styled('nav', {
     display: 'block',
     p: '$6',
 
-    bg: '$gray50'
+    bg: '$gray50',
+
+    position: 'fixed'
   }
 })
 

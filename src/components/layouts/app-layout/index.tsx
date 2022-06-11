@@ -9,10 +9,15 @@ type AppLayoutProps = {
 export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   return (
     <S.Wrapper>
-      <NavigationBar />
+      <S.Container>
+        <NavigationBar />
+      </S.Container>
 
       <S.Content>
-        <Header />
+        <S.Container style={{ height: 82 }}>
+          <Header />
+        </S.Container>
+
         {children}
       </S.Content>
     </S.Wrapper>

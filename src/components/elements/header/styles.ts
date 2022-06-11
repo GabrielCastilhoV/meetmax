@@ -10,6 +10,9 @@ export const Wrapper = styled('nav', {
   align: 'center',
   justify: 'space-between',
 
+  position: 'fixed',
+  zIndex: '$base',
+
   bg: '$gray50',
 
   '@lg': {

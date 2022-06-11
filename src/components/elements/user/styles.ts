@@ -9,6 +9,7 @@ export const Wrapper = styled('div', {
   align: 'center',
   gap: '$4',
 
+  cursor: 'pointer',
   br: '$half'
 })
 
