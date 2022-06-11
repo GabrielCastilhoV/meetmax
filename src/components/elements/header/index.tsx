@@ -12,7 +12,12 @@ export const Header = () => {
       <S.HeaderMobile>
         <Logo />
 
-        <Button color="secondary" icon={<FiAlignRight />} layout="minimal" />
+        <Button
+          color="secondary"
+          icon={<FiAlignRight />}
+          layout="minimal"
+          size="small"
+        />
       </S.HeaderMobile>
 
       <Search />

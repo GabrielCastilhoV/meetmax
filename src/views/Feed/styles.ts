@@ -1,14 +1,9 @@
 import { styled } from 'styles/stitches.config'
 
-export const Wrapper = styled('div', {
+export const Wrapper = styled('main', {
   display: 'grid',
-  gridGap: '$4',
+  gap: '$4',
   p: 20,
-
-  '& .box': {
-    bg: '$gray50',
-    br: '$md'
-  },
 
   '@md': {
     gridTemplateColumns: '1fr 0.7fr 0.5fr '

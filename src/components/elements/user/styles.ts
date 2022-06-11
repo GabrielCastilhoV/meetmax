@@ -2,11 +2,17 @@ import Image from 'next/image'
 
 import { styled, VariantProps } from 'styles/stitches.config'
 
-export type UserVariants = VariantProps<typeof Wrapper>
+export type UserVariants = VariantProps<typeof ImageContainer>
 
 export const Wrapper = styled('div', {
-  br: '$half',
+  display: 'flex',
+  align: 'center',
+  gap: '$4',
 
+  br: '$half'
+})
+
+export const ImageContainer = styled('div', {
   variants: {
     size: {
       normal: {
@@ -15,6 +21,10 @@ export const Wrapper = styled('div', {
 
       small: {
         w: '60px'
+      },
+
+      tiny: {
+        w: '50px'
       }
     }
   },
@@ -24,10 +34,19 @@ export const Wrapper = styled('div', {
   }
 })
 
-export const Name = styled('p', {})
+export const Name = styled('p', {
+  fontSize: '$sm',
+  fontWeight: '$bold'
+})
 
-export const Bio = styled('span', {})
+export const Bio = styled('span', {
+  display: 'block',
+
+  fontSize: '12px',
+  mt: '$1'
+})
 
 export const Avatar = styled(Image, {
+  w: '100%',
   br: '$half'
 })

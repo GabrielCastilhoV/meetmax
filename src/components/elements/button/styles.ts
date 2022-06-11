@@ -18,7 +18,7 @@ export const Wrapper = styled('button', {
 
   span: {
     fontWeight: '$bold',
-    fontSize: '$xs'
+    fontSize: '14px'
   },
 
   svg: {

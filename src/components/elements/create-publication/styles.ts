@@ -1,21 +1,14 @@
 import { styled } from 'styles/stitches.config'
+import { Box } from '../box'
 
-export const Wrapper = styled('div', {
-  w: '100%',
-
-  p: '$5',
-
-  bg: '$gray50',
-  br: '$md'
-})
+export const Wrapper = styled(Box)
 
 export const Feed = styled('div', {
   w: '100%',
   mb: '$5',
 
   display: 'flex',
-  align: 'center',
-  gap: '$4'
+  align: 'center'
 })
 
 export const Footer = styled('div', {
