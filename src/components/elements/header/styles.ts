@@ -16,6 +16,7 @@ export const Wrapper = styled('nav', {
   bg: '$gray50',
 
   '@lg': {
+    w: 'calc(100% - 250px)',
     pl: 0
   }
 })
@@ -27,6 +28,7 @@ export const User = styled('div', {
     w: 200,
     display: 'flex',
     align: 'center',
+
     position: 'relative',
 
     '& .username': {
