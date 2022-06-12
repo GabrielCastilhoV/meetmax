@@ -1,5 +1,5 @@
 import { styled } from 'styles/stitches.config'
-import { Box } from 'components/elements'
+import * as DialogPrimitive from '@radix-ui/react-dialog'
 
 export const Wrapper = styled('div')
 
@@ -7,7 +7,9 @@ export const Header = styled('div', {
   display: 'flex',
   align: 'center',
   justify: 'space-between',
-  gap: '$4'
+  gap: '$4',
+
+  position: 'relative'
 })
 
 export const ContentContainer = styled('div', {
@@ -41,4 +43,17 @@ export const CommentContainer = styled('div', {
   display: 'flex',
   align: 'center',
   mt: '$2'
+})
+
+export const DialogContent = styled(DialogPrimitive.Content, {
+  position: 'absolute',
+  top: 50,
+  right: -10,
+
+  br: 6,
+  bg: '$gray50',
+  padding: '$4',
+
+  boxShadow:
+    'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px'
 })

@@ -1,6 +1,13 @@
-import { FiMoreHorizontal } from 'react-icons/fi'
-import { BiLike, BiComment } from 'react-icons/bi'
-import { RiShareForwardLine, RiSendPlane2Line } from 'react-icons/ri'
+import { FiMoreHorizontal, FiBell } from 'react-icons/fi'
+import { BiLike, BiComment, BiHide } from 'react-icons/bi'
+import {
+  RiShareForwardLine,
+  RiSendPlane2Line,
+  RiAlertLine,
+  RiUserUnfollowLine
+} from 'react-icons/ri'
+
+import * as Dialog from '@radix-ui/react-dialog'
 
 import { User, Button, Box, TextField } from 'components/elements'
 
@@ -14,7 +21,37 @@ export const Post = ({ post, user }: PostProps) => {
         <S.Header>
           <User {...user} />
 
-          <Button layout="minimal" size="small" icon={<FiMoreHorizontal />} />
+          <Dialog.Root>
+            <Dialog.Trigger asChild>
+              <Button
+                layout="minimal"
+                size="small"
+                icon={<FiMoreHorizontal />}
+              />
+            </Dialog.Trigger>
+
+            <S.DialogContent>
+              <Button layout="minimal" size="small" icon={<BiHide />}>
+                Hide Post
+              </Button>
+
+              <Button layout="minimal" size="small" icon={<FiBell />}>
+                Turn on notification for this post
+              </Button>
+
+              <Button layout="minimal" size="small" icon={<RiAlertLine />}>
+                Report this post
+              </Button>
+
+              <Button
+                layout="minimal"
+                size="small"
+                icon={<RiUserUnfollowLine />}
+              >
+                Unfollow
+              </Button>
+            </S.DialogContent>
+          </Dialog.Root>
         </S.Header>
 
         <S.ContentContainer>
