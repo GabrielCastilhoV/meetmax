@@ -11,5 +11,6 @@ export const theme: ConfigType.Theme = {
   colors: config.colors,
   transitions: config.transitions,
   radii: config.radii,
-  zIndices: config.indices
+  zIndices: config.indices,
+  shadows: config.shadows
 }
