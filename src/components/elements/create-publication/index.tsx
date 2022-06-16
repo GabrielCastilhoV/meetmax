@@ -27,7 +27,7 @@ export const CreatePublication = () => {
           </Button>
         </S.Options>
 
-        <Button color="primary" size="small">
+        <Button color="primary" size="small" style={{ padding: '0 30px' }}>
           Post
         </Button>
       </S.Footer>

@@ -7,6 +7,24 @@ export const Wrapper = styled('main', {
 
   '@md': {
     p: 20,
-    gridTemplateColumns: '1fr 0.7fr 0.5fr '
+    pr: 0,
+    gridTemplateColumns: '1fr 0.6fr 0.5fr'
+  }
+})
+
+export const UserContent = styled('div', {
+  p: '$4'
+})
+
+export const ButtonsWrapper = styled('div', {
+  display: 'flex',
+  align: 'center',
+  justify: 'space-between',
+  gap: '$4',
+
+  mt: '$6',
+
+  svg: {
+    cursor: 'pointer'
   }
 })

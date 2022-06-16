@@ -29,10 +29,6 @@ export const Wrapper = styled('button', {
   variants: {
     layout: {
       normal: {
-        '@lg': {
-          px: '$10'
-        },
-
         transition: 'filter 0.2s ease-in-out',
 
         '&:hover': {
@@ -57,10 +53,22 @@ export const Wrapper = styled('button', {
 
     color: {
       primary: {
-        bg: '$blue300'
+        bg: '$blue300',
+        color: '#FFF'
       },
+
       secondary: {
         bg: 'transpararent'
+      },
+
+      tertiary: {
+        bg: 'transpararent',
+        color: '$blue300'
+      },
+
+      quaternary: {
+        bg: 'transpararent',
+        border: '1px solid $gray100'
       }
     }
   },

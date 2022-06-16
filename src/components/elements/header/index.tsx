@@ -17,6 +17,7 @@ export const Header = () => {
           icon={<FiAlignRight />}
           layout="minimal"
           size="small"
+          style={{ paddingRight: 0 }}
         />
       </S.HeaderMobile>
 
