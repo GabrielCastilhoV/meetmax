@@ -11,6 +11,7 @@ import {
   Button,
   Column,
   CreatePublication,
+  Event,
   Post,
   User
 } from 'components/elements'
@@ -57,7 +58,19 @@ export const FeedView = () => {
         </Box>
 
         <Box headerName="Recent Event" buttonIcon={<FiMoreHorizontal />}>
-          .
+          <Event
+            title="Graduation Ceremony"
+            description="The graduation ceremony is also sometimes called..."
+            image="/images/events/event.png"
+            seen="11"
+          />
+
+          <Event
+            title="Photography Ideas"
+            description="Reflections, Reflections work because they can create..."
+            image="/images/events/event2.png"
+            seen="5"
+          />
         </Box>
 
         <Box headerName="Birthdays" buttonName="See all">
