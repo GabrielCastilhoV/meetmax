@@ -7,6 +7,7 @@ import {
 import { BiWorld } from 'react-icons/bi'
 
 import {
+  Birthday,
   Box,
   Button,
   Column,
@@ -74,7 +75,7 @@ export const FeedView = () => {
         </Box>
 
         <Box headerName="Birthdays" buttonName="See all">
-          .
+          <Birthday />
         </Box>
       </Column>
 

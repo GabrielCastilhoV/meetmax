@@ -27,7 +27,7 @@ export const Header = styled('div', {
   align: 'center',
   justify: 'space-between',
 
-  borderBottom: '1px solid $gray100',
+  borderBottom: '3px solid $gray100',
 
   h5: {
     fontSize: '$xs',

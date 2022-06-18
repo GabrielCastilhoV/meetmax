@@ -6,7 +6,6 @@ export type UserVariants = VariantProps<typeof ImageContainer>
 
 export const Wrapper = styled('div', {
   display: 'flex',
-  align: 'center',
   gap: '$4',
 
   cursor: 'pointer',

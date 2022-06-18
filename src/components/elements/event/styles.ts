@@ -23,7 +23,7 @@ export const Title = styled('h6', {
 
 export const Description = styled('p', {
   fontSize: '$xxs',
-  mt: '$4'
+  mt: '$2'
 })
 
 export const Footer = styled('div', {
