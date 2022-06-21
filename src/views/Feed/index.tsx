@@ -15,11 +15,10 @@ import {
   Event,
   Post,
   User,
-  Search
+  FriendsBar
 } from 'components/elements'
 
 import { postsMock } from 'components/elements/post/mock'
-import { friends, status } from 'utils/constants'
 
 import * as S from './styles'
 
@@ -83,41 +82,7 @@ export const FeedView = () => {
       </Column>
 
       <S.FixedContainer>
-        <Column>
-          <Box hideRadii>
-            <Search placeholder="Search Friends!" />
-
-            <div className="friends">
-              <h6>Status</h6>
-
-              <Button layout="minimal" size="small" color="tertiary">
-                See all
-              </Button>
-            </div>
-
-            <S.AvatarsContainer>
-              {status?.map((data, index) => (
-                <User key={index} {...data} />
-              ))}
-            </S.AvatarsContainer>
-
-            <div className="friends">
-              <h6>Friends</h6>
-
-              <Button
-                layout="minimal"
-                size="small"
-                icon={<FiMoreHorizontal />}
-              />
-            </div>
-
-            <S.FriendsContainer>
-              {friends?.map((data, index) => (
-                <User key={index} {...data} size="tiny" />
-              ))}
-            </S.FriendsContainer>
-          </Box>
-        </Column>
+        <FriendsBar />
       </S.FixedContainer>
     </S.Wrapper>
   )
