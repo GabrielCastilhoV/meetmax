@@ -6,13 +6,15 @@ export type UserVariants = VariantProps<typeof ImageContainer>
 
 export const Wrapper = styled('div', {
   display: 'flex',
+  align: 'center',
   gap: '$4',
 
-  cursor: 'pointer',
   br: '$half'
 })
 
 export const ImageContainer = styled('div', {
+  cursor: 'pointer',
+
   variants: {
     size: {
       normal: {
@@ -26,6 +28,13 @@ export const ImageContainer = styled('div', {
       tiny: {
         w: '50px'
       }
+    },
+
+    isStatus: {
+      true: {
+        border: '2px solid $blue300',
+        br: '$half'
+      }
     }
   },
 
@@ -34,8 +43,33 @@ export const ImageContainer = styled('div', {
   }
 })
 
+export const Content = styled('div', {
+  display: 'flex',
+  align: 'center',
+  justify: 'space-between',
+
+  variants: {
+    fullWidth: {
+      true: {
+        w: '100%'
+      }
+    }
+  }
+})
+
+export const Circle = styled('div', {
+  w: 10,
+  h: 10,
+  br: '$half',
+  bg: '$green300'
+})
+
+export const LastTime = styled('div')
+
 export const Name = styled('p', {
-  fontSize: '$sm',
+  cursor: 'pointer',
+
+  fontSize: '$xs',
   fontWeight: '$bold'
 })
 

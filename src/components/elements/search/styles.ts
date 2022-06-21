@@ -1,24 +1,20 @@
 import { styled } from 'styles/stitches.config'
 
 export const Wrapper = styled('label', {
-  display: 'none',
+  w: 400,
+  h: 40,
+  px: '$3',
 
-  '@md': {
-    w: 400,
-    h: 40,
-    px: '$3',
+  borderRadius: '$sm',
+  border: '1px solid $gray150',
 
-    borderRadius: '$sm',
-    border: '1px solid $gray150',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '$3',
 
-    display: 'flex',
-    alignItems: 'center',
-    gap: '$3',
-
-    svg: {
-      w: 22,
-      h: 22
-    }
+  svg: {
+    w: 22,
+    h: 22
   }
 })
 

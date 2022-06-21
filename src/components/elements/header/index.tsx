@@ -21,7 +21,9 @@ export const Header = () => {
         />
       </S.HeaderMobile>
 
-      <Search />
+      <div className="search">
+        <Search placeholder="Search for something here..." />
+      </div>
 
       <S.User>
         <span className="username">Gabriel Castilho</span>

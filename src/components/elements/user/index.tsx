@@ -2,7 +2,13 @@ import { UserProps } from './types'
 
 import * as S from './styles'
 
-export const User = ({ name, bio, avatar, ...rest }: UserProps) => {
+export const User = ({
+  name,
+  bio,
+  avatar,
+  lastTimeOnline,
+  ...rest
+}: UserProps) => {
   return (
     <S.Wrapper>
       <S.ImageContainer {...rest}>
@@ -15,10 +21,18 @@ export const User = ({ name, bio, avatar, ...rest }: UserProps) => {
         />
       </S.ImageContainer>
 
-      <div>
-        {!!name && <S.Name>{name}</S.Name>}
-        {!!bio && <S.Bio>{bio}</S.Bio>}
-      </div>
+      <S.Content fullWidth={!!lastTimeOnline ? true : false}>
+        <div>
+          {!!name && <S.Name {...rest}>{name}</S.Name>}
+          {!!bio && <S.Bio>{bio}</S.Bio>}
+        </div>
+
+        {!!lastTimeOnline && (
+          <S.LastTime>
+            {lastTimeOnline === 'online' ? <S.Circle /> : lastTimeOnline}
+          </S.LastTime>
+        )}
+      </S.Content>
     </S.Wrapper>
   )
 }

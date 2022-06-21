@@ -18,6 +18,12 @@ export const Wrapper = styled('div', {
       true: {
         boxShadow: '$box'
       }
+    },
+
+    hideRadii: {
+      true: {
+        br: 0
+      }
     }
   }
 })

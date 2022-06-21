@@ -3,12 +3,23 @@ import { styled } from 'styles/stitches.config'
 export const Wrapper = styled('main', {
   display: 'grid',
   gap: '$4',
-  p: 10,
+
+  '& .friends': {
+    display: 'flex',
+    align: 'center',
+    justify: 'space-between',
+
+    borderBottom: '3px solid $gray100',
+    my: '$6',
+
+    h6: {
+      fontSize: '$sm'
+    }
+  },
 
   '@md': {
-    p: 20,
-    pr: 0,
-    gridTemplateColumns: '1fr 0.6fr 0.5fr'
+    gridTemplateColumns: '1fr 0.6fr 0.6fr',
+    pl: 20
   }
 })
 
@@ -27,4 +38,25 @@ export const ButtonsWrapper = styled('div', {
   svg: {
     cursor: 'pointer'
   }
+})
+
+export const AvatarsContainer = styled('div', {
+  display: 'flex',
+  align: 'center',
+  justify: 'center',
+  my: '$6'
+})
+
+export const FriendsContainer = styled('div', {
+  display: 'flex',
+  flexDir: 'column',
+  gap: '$4'
+})
+
+export const FixedContainer = styled('div', {
+  h: 'calc(100vh - 82px)',
+  overflow: 'auto',
+
+  position: 'fixed',
+  right: 0
 })

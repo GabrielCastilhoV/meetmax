@@ -11,7 +11,7 @@ export const dark: ConfigType.Theme = {
     gray300: '#4E5D78',
 
     blue300: '#377DFF',
-
+    green300: '#38CB89',
     orange300: '#FF5630'
   }
 }

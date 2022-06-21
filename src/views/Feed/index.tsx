@@ -14,23 +14,26 @@ import {
   CreatePublication,
   Event,
   Post,
-  User
+  User,
+  Search
 } from 'components/elements'
+
 import { postsMock } from 'components/elements/post/mock'
+import { friends, status } from 'utils/constants'
 
 import * as S from './styles'
 
 export const FeedView = () => {
   return (
     <S.Wrapper>
-      <Column>
+      <Column style={{ margin: '20px 0 20px' }}>
         <CreatePublication />
 
         {postsMock?.length > 0 &&
           postsMock.map((data, index) => <Post key={index} {...data} />)}
       </Column>
 
-      <Column>
+      <Column style={{ margin: '20px 0 20px' }}>
         <Box headerName="You Might Like" buttonName="See all">
           <S.UserContent>
             <User
@@ -79,11 +82,43 @@ export const FeedView = () => {
         </Box>
       </Column>
 
-      <Column>
-        <Box>
-          <h1>.</h1>
-        </Box>
-      </Column>
+      <S.FixedContainer>
+        <Column>
+          <Box hideRadii>
+            <Search placeholder="Search Friends!" />
+
+            <div className="friends">
+              <h6>Status</h6>
+
+              <Button layout="minimal" size="small" color="tertiary">
+                See all
+              </Button>
+            </div>
+
+            <S.AvatarsContainer>
+              {status?.map((data, index) => (
+                <User key={index} {...data} />
+              ))}
+            </S.AvatarsContainer>
+
+            <div className="friends">
+              <h6>Friends</h6>
+
+              <Button
+                layout="minimal"
+                size="small"
+                icon={<FiMoreHorizontal />}
+              />
+            </div>
+
+            <S.FriendsContainer>
+              {friends?.map((data, index) => (
+                <User key={index} {...data} size="tiny" />
+              ))}
+            </S.FriendsContainer>
+          </Box>
+        </Column>
+      </S.FixedContainer>
     </S.Wrapper>
   )
 }

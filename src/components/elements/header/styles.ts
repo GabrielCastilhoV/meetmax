@@ -18,6 +18,14 @@ export const Wrapper = styled('nav', {
   '@lg': {
     w: 'calc(100% - 250px)',
     pl: 0
+  },
+
+  '& .search': {
+    display: 'none',
+
+    '@md': {
+      display: 'block'
+    }
   }
 })
 
