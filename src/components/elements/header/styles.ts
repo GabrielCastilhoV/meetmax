@@ -24,6 +24,7 @@ export const Wrapper = styled('nav', {
     display: 'none',
 
     '@md': {
+      w: 400,
       display: 'block'
     }
   }

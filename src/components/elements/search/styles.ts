@@ -1,7 +1,7 @@
 import { styled } from 'styles/stitches.config'
 
 export const Wrapper = styled('label', {
-  minW: 200,
+  w: '100%',
   h: 40,
   px: '$3',
 

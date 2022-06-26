@@ -3,6 +3,7 @@ import { styled } from 'styles/stitches.config'
 export const Wrapper = styled('main', {
   display: 'grid',
   gap: '$4',
+  p: 10,
 
   '& .friends': {
     display: 'flex',
@@ -19,6 +20,7 @@ export const Wrapper = styled('main', {
 
   '@md': {
     gridTemplateColumns: '1fr 0.6fr 0.45fr',
+    p: 0,
     pl: 20
   }
 })
@@ -56,9 +58,14 @@ export const FriendsContainer = styled('div', {
 })
 
 export const FixedContainer = styled('div', {
-  h: 'calc(100vh - 82px)',
-  overflow: 'auto',
+  display: 'none',
 
-  position: 'fixed',
-  right: 0
+  '@md': {
+    display: 'block',
+    h: 'calc(100vh - 82px)',
+
+    overflow: 'auto',
+    position: 'fixed',
+    right: 0
+  }
 })
